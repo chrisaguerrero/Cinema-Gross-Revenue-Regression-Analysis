@@ -1,0 +1,20 @@
+Overview:
+    Our client has reached out to us to assist in suggesting where to allocate investments to see which movie(s) will be the most successful. While movies have perhaps slowed down during the COVID-19 pandemic, there is plenty of data that has been recorded to help us predict what movies will be successful, depending on certain factors such as the actors/actresses starring in the movie, the genre, the style of movie, if it's part of a franchise, amongst many other factors. A movie's success generally can be determined by calculating their gross profit- or the amount of revenue the movie able to generate as a surplus after offsetting the marketing and production budget that was used.
+
+Question/Need:
+    The question needed to answer for out client is - can we predict the profitability of movies that are about to be released? Given a set of movies that are to come out in the remainder of 2021 into 2022, and using the data available on movies within the past 5 years- are we able to see trends or patters that could help determine which movies are going to be more successful than others.
+
+Data:
+Using the database provided by Box office Mojo, we are able to pull relevant data from movies in the past 5 years that could help pinpoint patterns. The data we are going to be looking to scrape are: revenue, genre, actors, directors, release date, adapted source (if any), and projected size of budget, as well as other features that may have an impact on the success of a movie.
+
+Tools:
+For web scraping, I will be intending on using BeautifulSoup, as well as Selenium when needed. 
+
+For the data analysis portion of the project, I will be looking at:
+Python - numpy, Pandas, SKLearn, and Statsmodels for analysis. 
+MatPlotLib, Seaborn packaged will also be used for visualizing the data and model that will be created.
+
+MVP:
+The initial goal that we will be attempting to achieve will be to build a simple linear regression model to show patterns from our training data to represent a linear correlation between features and our target - the gross profit from a movie. By testing and training our model, the MVP will show how each feature has an impact on the overall success of the movie.
+
+Looking ahead from the model, we will be looking to use this trained data from previously released movies to predict on our unseen data- or rather, movies that are scheduled to be realeased in order to accurately predict the success of those movies.
