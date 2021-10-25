@@ -1,0 +1,19 @@
+Abstract - 
+The cinema industry is one of the oldest industries to exist globally. While having incredibly high costs to produce, market, and release movies, the industry has continuously seen a huge amount of profitability over time despite a rise in production value. Interestingly enough, it’s also difficult to predict what will make a movie successful. For this analysis, I will be diving into several aspects that are shared amongst the top 1000 all time highest grossing movies, and searching for a relationship amongst this data set that can help find a correlation in what makes a movie successful. 
+
+
+Data and Design - 
+The database used for this project was through boxofficemojo.com. Using their ‘all-time’ records of highest grossing movies, I was able to scrape details of each movie such as, genre classifications that they fall under, the revenue the movie brought in, the budget, movie distributor, movie duration, and MPAA ratings to see which of these details correlate the most with higher grossing movies.
+
+Algorithms - 
+	In order to attempt to find the highest possible correlation amongst my target (lifetime gross) and my features, I began with a simple linear regression. This displayed a low success rate for the model, which signaled that perhaps a more rigorous validation system was to be used. I applied cross validation and ridge regression to the model to have an impact on the features as much as possible. Feature engineering on the model was also constructed to extract any polynomial relationships in the data - such as the results that were found with the polynomial interactions such as with the budget data. While difficult to have a large impact on the overall R squared of the model, I found this to have the highest effect for any feature engineering. Also, LASSO was applied to the model to impact the features across the board, and had a positive impact on the model as well.
+
+Tools - 
+BeautifulSoup was used for accessing all data off of boxofficemojo.com
+Python was used for all analysis
+Python packages included Seaborn/ matplotlib for visualizations of data, numpy and pandas for dataframe construction and analysis, as well as SKLearn for regression analysis. 
+Excel Data Spreadsheets were also used for referencing the entire data frame along the process and slight data manipulation checks.
+
+Findings and Results - 
+The target that was used for measurement will be lifetime gross revenue in the United States and Canada (Domestic). Using the boxofficemojo database, I found the duration of the movie, budget, distributors, genre, and year released as the key features to look further into. While the results of the models showed that it was difficult to predict exactly what can directly make a movie successful, as well as how to measure that success, there were strong relationships found with the budget used to produce, market, and release the movie. I was surprised to see that several factors that I anticipated to be highly correlated with success were not as impactful in the model as I had hypothesized. Similarly, the analysis of the data confirmed that a movie’s success can be measured in several different manners. I also found interesting results that pointed out that newer movies are perhaps not having as much of an impact on overall gross on an average basis than in previous times, despite more movies being released and with a higher production value (not including the fact that more movies are being released).  
+There is a lot of interesting data that could also be looked further into as we approach 2022, as the industry has significantly changed in just the last 2-3 years given the effect the pandemic has had on theatres, and the entertainment industry - as we see more of a shift towards the streaming / mobile phase of the entertainment industry.
